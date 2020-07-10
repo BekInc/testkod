@@ -2,7 +2,7 @@
 /**
  *Author: Tilon
  *
- *Telegram : @Dev_imc
+ *Telegram : @Dev_inc
  */
 $API_KEY = '1249506127:AAGaFjHhU-GhLBAyJO9Rg9ZISKlKkUJbNxY';
 ##------------------------------##
@@ -27,13 +27,13 @@ function bot($method,$datas=[]){
  'action'=>$action
  ]);
  }
- //====================ᵗᶦᵏᵃᵖᵖ======================//
+ //====================devinc======================//
 $update = json_decode(file_get_contents('php://input'));
 $message = $update->message;
 $from_id = $message->from->id;
 $chat_id = $message->chat->id;
 $text = $message->text;
-//====================ᵗᶦᵏᵃᵖᵖ======================//
+//====================Devinc======================//
 if(preg_match('/^\/([Ss]tart)/',$text)){
 $start_time = round(microtime(true) * 1000);
       $send=  bot('sendmessage', [
@@ -46,7 +46,7 @@ $start_time = round(microtime(true) * 1000);
                     bot('editMessagetext',[
                         "chat_id" => $chat_id,
                         "message_id" => $send,
-                        "text" => "Tezlik:" . $time_taken . "ms",
+                        "text" => "Speed:" . $time_taken . "ms",
                     ]);
 }
 ?>
